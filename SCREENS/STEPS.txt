@@ -1,0 +1,106 @@
+cd path\to\chalimidi
+mkdir css js images assets
+mkdir images\sweets
+mkdir images\namkeen
+
+type nul > index.html
+type nul > products.html
+type nul > about.html
+type nul > contact.html
+
+type nul > css\style.css
+type nul > css\products.css
+type nul > css\responsive.css
+
+type nul > js\app.js
+type nul > js\products.js
+type nul > js\cart.js
+type nul > js\whatsapp.js
+
+type nul > images\logo.png
+type nul > images\hero.jpg
+
+Final Folder Structure
+
+chalimidi/
+│
+├── index.html
+├── products.html
+├── about.html
+├── contact.html
+│
+├── css/
+│   ├── style.css
+│   ├── products.css
+│   └── responsive.css
+│
+├── js/
+│   ├── app.js
+│   ├── products.js
+│   ├── cart.js
+│   └── whatsapp.js
+│
+├── images/
+│   ├── logo.png
+│   ├── hero.jpg
+│   ├── sweets/
+│   └── namkeen/
+│
+└── assets/
+
+==================================
+chalimidi/
+│
+├── index.html
+├── products.html
+├── about.html
+├── contact.html
+│
+├── css/
+│   ├── style.css
+│   ├── variables.css
+│   ├── animations.css
+│   ├── products.css
+│   └── responsive.css
+│
+├── js/
+│   ├── app.js
+│   ├── data.js          ← All sweets & prices
+│   ├── products.js
+│   ├── cart.js
+│   ├── whatsapp.js
+│   └── search.js
+│
+├── images/
+│   ├── logo.png
+│   ├── hero.jpg
+│   ├── sweets/
+│   ├── namkeen/
+│   ├── banners/
+│   └── icons/
+│
+├── assets/
+│   └── fonts/
+│
+└── favicon.ico
+
+                 data.js
+                    │
+        ┌───────────┴────────────┐
+        │                        │
+        ▼                        ▼
+   products.js               cart.js
+        │                        │
+        └───────────┬────────────┘
+                    ▼
+              whatsapp.js
+                    │
+                    ▼
+            WhatsApp Checkout
+
+TO START SERVER LOCALLY
+http-server -o
+
+http://127.0.0.1:8080/
+
+ctrl + F5 to refresh latest css
