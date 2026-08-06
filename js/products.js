@@ -219,6 +219,7 @@ Update Product Count
 
 function updateProductCount(count) {
   const productCount = document.getElementById("productCount");
+  
 
   if (count === 1) {
     productCount.textContent = "Showing 1 Product";
@@ -239,4 +240,16 @@ checkoutBtn.addEventListener("click", () => {
 
 closeModal.addEventListener("click", () => {
   checkoutModal.classList.add("hidden");
+});
+//---------------------------------------------
+const closeCartBtn = document.getElementById("closeCartBtn");
+
+closeCartBtn.addEventListener("click", () => {
+  document.getElementById("cartPanel").classList.add("hidden");
+});
+
+document.getElementById("ordersBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  document.getElementById("cartPanel").classList.remove("hidden");
 });

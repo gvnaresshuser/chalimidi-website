@@ -1,0 +1,659 @@
+/*==========================================
+CHALIMIDI SWEETS
+HOME PAGE
+Version 2.0
+==========================================*/
+
+/*==========================================
+RESET
+==========================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffdf8;
+    color: #333;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    background: #fff;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+
+}
+
+.navbar {
+
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: 80px;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+.logo div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.logo-icon {
+
+    font-size: 1.75rem;
+
+    line-height: 1;
+
+}
+
+.logo h2 {
+
+    color: #8B4513;
+
+    font-size: 30px;
+
+    font-family: 'Playfair Display', serif;
+
+}
+
+.logo small {
+
+    color: #777;
+
+    font-size: .8rem;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    color: #444;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: #E67E22;
+
+}
+
+.nav-links a {
+
+    position: relative;
+
+    color: #444;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: #E67E22;
+
+}
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #E67E22;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+
+    width: 100%;
+
+}
+
+.menu-toggle {
+
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+/*==========================================
+HERO
+==========================================*/
+
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    padding: 100px 20px;
+
+}
+
+.hero-content {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+.hero h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2rem, 6vw, 4rem);
+
+    color: white;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+    text-shadow: 0 5px 15px rgba(0, 0, 0, .4);
+
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #F5F5F5;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+}
+
+.hero-buttons {
+
+    margin-top: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+/*==========================================
+HERO BUTTONS
+==========================================*/
+.hero-btn {
+
+    background: #F4B400;
+
+    color: #222;
+
+    padding: 16px 34px;
+
+    border-radius: 40px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.hero-btn:hover {
+
+    background: white;
+
+    transform: translateY(-5px);
+
+}
+
+.secondary-btn {
+
+    padding: 16px 34px;
+
+    border: 2px solid white;
+
+    color: white;
+
+    border-radius: 40px;
+
+    transition: .35s;
+
+}
+
+.secondary-btn:hover {
+
+    background: white;
+
+    color: #333;
+
+}
+
+/*==========================================
+WHY CHOOSE US
+==========================================*/
+
+.features {
+
+    padding: 80px 0;
+
+    background: #FFFDF8;
+
+}
+
+.features h2 {
+
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 2.2rem;
+
+    color: #5D4037;
+
+    margin-bottom: 15px;
+
+}
+
+.features .sub-title {
+
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 60px;
+
+    font-size: 17px;
+
+}
+
+/*==========================================
+FEATURE GRID
+==========================================*/
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+}
+
+/*==========================================
+FEATURE CARD
+==========================================*/
+
+.card {
+
+    background: #fff;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+    cursor: pointer;
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+
+}
+
+.card span {
+
+    display: block;
+
+    font-size: 3rem;
+
+    margin-bottom: 18px;
+
+}
+
+.card h3 {
+
+    color: #5D4037;
+
+    margin-bottom: 15px;
+
+    font-size: 1.35rem;
+
+}
+
+.card p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+}
+
+/*==========================================
+FEATURE ANIMATION
+==========================================*/
+
+.card:hover span {
+
+    transform: scale(1.15);
+
+    transition: .35s;
+
+}
+
+/*==========================================
+CTA
+==========================================*/
+
+.cta {
+
+    background: linear-gradient(135deg, #5D4037, #8B4513);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+.cta h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2.5rem, 6vw, 4.1rem);
+
+    margin-bottom: 20px;
+
+}
+
+.cta p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #F5F5F5;
+
+    margin-bottom: 40px;
+
+}
+
+.cta-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.btn-primary {
+
+    background: #F4B400;
+
+    color: #333;
+
+    padding: 16px 35px;
+
+    border-radius: 40px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-primary:hover {
+
+    background: white;
+
+    transform: translateY(-4px);
+
+}
+
+.btn-secondary {
+
+    border: 2px solid white;
+
+    color: white;
+
+    padding: 16px 35px;
+
+    border-radius: 40px;
+
+    transition: .3s;
+
+}
+
+.btn-secondary:hover {
+
+    background: white;
+
+    color: #333;
+
+}
+
+/*==========================================
+FOOTER
+==========================================*/
+
+footer {
+
+    background: #2F211D;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+}
+
+footer h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    margin-bottom: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+footer p {
+
+    color: #DDD;
+
+    margin-bottom: 20px;
+
+}
+/*==========================================
+FOOTER BUTTON LINKS
+==========================================*/
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin: 30px 0;
+
+}
+
+.footer-links a {
+
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    border: 2px solid rgba(255, 255, 255, .35);
+
+    border-radius: 30px;
+
+    color: #fff;
+
+    font-weight: 500;
+
+    transition: all .35s ease;
+
+}
+
+.footer-links a:hover {
+
+    background: #F4B400;
+
+    border-color: #F4B400;
+
+    color: #333;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(244, 180, 0, .35);
+
+}
+
+.copyright {
+
+    border-top: 1px solid rgba(255, 255, 255, .2);
+
+    padding-top: 20px;
+
+    font-size: 14px;
+
+    color: #BBB;
+
+}

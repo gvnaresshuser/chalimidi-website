@@ -87,8 +87,8 @@ function addToCart(productId) {
   );
 
   if (existingItem) {
-    showToast(`${product.name} (${quantity.label}) already added`);
-
+    //showToast(`${product.name} (${quantity.label}) already added`);
+showToast(`${product.name} (${quantity.label}) already added`, "error");
     return;
   }
 
@@ -112,7 +112,8 @@ function addToCart(productId) {
 
   saveCart();
 
-  showToast(`${product.name} added successfully`);
+  //showToast(`${product.name} added successfully`);
+  showToast(`${product.name} added successfully`, "success");
 }
 
 /*
@@ -242,6 +243,11 @@ function renderCart() {
   cartTotal.textContent = grandTotal;
   cartCount.textContent = cart.length;
   cartBadge.textContent = cart.length;
+  const cartBadgeNav = document.getElementById("cartBadgeNav");
+
+  if (cartBadgeNav) {
+    cartBadgeNav.textContent = cart.length;
+  }
   if (cart.length === 0) {
     cartPanel.classList.add("hidden");
 

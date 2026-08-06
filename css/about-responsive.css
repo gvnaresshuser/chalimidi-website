@@ -1,0 +1,264 @@
+/*=====================================
+TABLETS (1024px and below)
+======================================*/
+
+@media (max-width:1024px) {
+
+    .about .container {
+        gap: 40px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mission .container {
+        gap: 20px;
+    }
+
+}
+
+/*=====================================
+TABLETS (768px and below)
+======================================*/
+
+@media (max-width:768px) {
+
+    /* ---------- Navbar ---------- */
+
+    .navbar {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: #5D4037;
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 70px;
+
+        right: -100%;
+
+        width: 280px;
+
+        height: calc(100vh - 70px);
+
+        background: white;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        align-items: flex-start;
+
+        padding: 40px 30px;
+
+        gap: 25px;
+
+        transition: .35s ease;
+
+        box-shadow: -5px 0 20px rgba(0, 0, 0, .15);
+
+    }
+
+    .nav-links.active {
+
+        right: 0;
+
+    }
+
+    /* ---------- Banner ---------- */
+
+    .banner {
+        height: 300px;
+    }
+
+    .overlay h1 {
+        font-size: 2.4rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    /* ---------- About ---------- */
+
+    .about {
+        padding: 60px 0;
+    }
+
+    .about .container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .about-text {
+
+        text-align: center;
+
+    }
+
+    .about-text h2 {
+
+        font-size: 2rem;
+
+    }
+
+    /* ---------- Mission ---------- */
+
+    .mission .container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    /* ---------- Cards ---------- */
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/*=====================================
+MOBILE (576px and below)
+======================================*/
+
+@media (max-width:576px) {
+
+    .logo h2 {
+
+        font-size: 22px;
+
+    }
+
+    .logo small {
+
+        font-size: 11px;
+
+    }
+
+    .overlay h1 {
+
+        font-size: 2rem;
+
+    }
+
+    .overlay p {
+
+        font-size: .95rem;
+
+    }
+
+    .about-text h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .about-text p {
+
+        font-size: 15px;
+
+    }
+
+    .mission-card {
+
+        padding: 30px 20px;
+
+    }
+
+    .card {
+
+        padding: 25px;
+
+    }
+
+    .promise {
+
+        padding: 30px 20px;
+
+    }
+
+    .promise h2 {
+
+        font-size: 2rem;
+
+    }
+
+}
+
+/*=====================================
+SMALL MOBILE (400px and below)
+======================================*/
+
+@media (max-width:400px) {
+
+    .navbar {
+
+        padding: 0 15px;
+
+    }
+
+    .logo {
+
+        gap: 8px;
+
+    }
+
+    .logo h2 {
+
+        font-size: 18px;
+
+    }
+
+    .overlay h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .overlay p {
+
+        font-size: 1.1rem;
+
+    }
+
+    .about {
+
+        padding: 50px 15px;
+
+    }
+
+    .mission {
+
+        padding: 50px 15px;
+
+    }
+
+    .why-us {
+
+        padding: 50px 15px;
+
+    }
+
+    .promise {
+
+        padding: 50px 15px;
+
+    }
+
+}

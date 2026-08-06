@@ -1,0 +1,59 @@
+
+E:\KISHAN\chalimidi>git init
+Initialized empty Git repository in E:/KISHAN/chalimidi/.git/
+
+E:\KISHAN\chalimidi>git add .
+
+E:\KISHAN\chalimidi>git commit -m "Chalimidi Sweets Version 1.0"
+[master (root-commit) a7811db] Chalimidi Sweets Version 1.0
+ 27 files changed, 3513 insertions(+)
+ create mode 100644 SCREENS/STEPS.txt
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 css/products.css
+ create mode 100644 css/responsive.css
+ create mode 100644 css/style.css
+ create mode 100644 images/favicon.ico
+ create mode 100644 images/hero.jpg
+ create mode 100644 images/logo.png
+ create mode 100644 images/namkeen/jantikalu.jpg
+ create mode 100644 images/namkeen/kaju-mixture.jpg
+ create mode 100644 images/namkeen/kharam-bundhi.jpg
+ create mode 100644 images/shop.jpg
+ create mode 100644 images/sweets/bellam-sunnundalu.jpg
+ create mode 100644 images/sweets/boondi-laddu.jpg
+ create mode 100644 images/sweets/dry-fruit-laddu.jpg
+ create mode 100644 images/sweets/kaju-katli.jpg
+ create mode 100644 images/sweets/mysore-pak.jpg
+ create mode 100644 images/sweets/palli-laddu.jpg
+ create mode 100644 index.html
+ create mode 100644 js/app.js
+ create mode 100644 js/cart.js
+ create mode 100644 js/data copy.js
+ create mode 100644 js/data.js
+ create mode 100644 js/products.js
+ create mode 100644 js/whatsapp.js
+ create mode 100644 products.html
+
+E:\KISHAN\chalimidi>git branch -M main
+
+E:\KISHAN\chalimidi>git remote add origin https://github.com/gvnaresshuser/chalimidi-website.git
+
+E:\KISHAN\chalimidi>git push -u origin main
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (34/34), 2.07 MiB | 1.04 MiB/s, done.
+Total 34 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/gvnaresshuser/chalimidi-website.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+E:\KISHAN\chalimidi>
+
+
+
+LIVE URL
+chalimidi-website.vercel.app
+https://chalimidi-website.vercel.app/
