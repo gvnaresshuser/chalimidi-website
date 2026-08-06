@@ -1,12 +1,15 @@
 console.log("whatsapp.js loaded");
-console.log(CONFIG);
-console.log(CONFIG.SHOP_NAME);
 /*
 ==========================================
 CHALIMIDI SWEETS
 WhatsApp Checkout
 ==========================================
 */
+
+//const SHOP_PHONE = "919876543210"; // Replace with your friend's WhatsApp number
+//const SHOP_PHONE = "919949570732";
+////const SHOP_PHONE = "919949570732";
+
 
 function generateWhatsAppMessage() {
   if (cart.length === 0) {
@@ -23,12 +26,9 @@ function generateWhatsAppMessage() {
     .getElementById("customerAddress")
     .value.trim();
 
-  /*
-    ==========================================
-    Current Date & Time
-    ==========================================
-    */
-
+  //const deliveryDate =
+  //  document.getElementById("deliveryDate")?.value || "Not Specified";
+  //---------------------------------
   const now = new Date();
 
   const orderDate = now.toLocaleDateString("en-IN", {
@@ -44,10 +44,11 @@ function generateWhatsAppMessage() {
 
     minute: "2-digit",
   });
+  //---------------------------------
 
   let grandTotal = 0;
 
-  let message = `*${CONFIG.SHOP_NAME}*
+  let message = `*CHALIMIDI SWEETS*
 
 Hello,
 
@@ -60,14 +61,14 @@ I would like to place the following order.
 
     message += `${index + 1}. ${item.name}
 Quantity : ${item.quantityLabel}
-Amount : ${CONFIG.CURRENCY}${item.total.toFixed(2)}
+Amount : ₹${item.total.toFixed(2)}
 ----------------------------
 `;
   });
 
   message += `
 Grand Total
-${CONFIG.CURRENCY}${grandTotal.toFixed(2)}
+₹${grandTotal.toFixed(2)}
 
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -76,12 +77,8 @@ Customer Details
 Name : ${customerName}
 Phone : +91 ${customerPhone}
 Address : ${customerAddress}
-
-━━━━━━━━━━━━━━━━━━━━
-
 Order Date : ${orderDate}
 Order Time : ${orderTime}
-
 ━━━━━━━━━━━━━━━━━━━━
 
 Please confirm the availability.
@@ -90,13 +87,6 @@ Thank you.`;
 
   return encodeURIComponent(message);
 }
-
-/*
-==========================================
-Place WhatsApp Order
-==========================================
-*/
-
 function placeWhatsAppOrder() {
   const customerName = document.getElementById("customerName").value.trim();
 
@@ -106,8 +96,11 @@ function placeWhatsAppOrder() {
     .getElementById("customerAddress")
     .value.trim();
 
+  //const deliveryDate = document.getElementById("deliveryDate")?.value || "";
+
+  //if (!customerName || !customerPhone || !customerAddress || !deliveryDate) {
   if (!customerName || !customerPhone || !customerAddress) {
-    showToast("Please complete all customer details.", "error");
+    showToast("Please complete all customer details.");
 
     return;
   }
@@ -116,17 +109,11 @@ function placeWhatsAppOrder() {
 
   if (!message) return;
 
+  ////const url = `https://wa.me/${SHOP_PHONE}?text=${message}`;
   const url = `https://wa.me/${CONFIG.SHOP_PHONE}?text=${message}`;
 
   window.open(url, "_blank");
 }
-
-/*
-==========================================
-WhatsApp Button
-==========================================
-*/
-
 const whatsappBtn = document.getElementById("whatsappBtn");
 
 if (whatsappBtn) {
